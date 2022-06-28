@@ -15,7 +15,6 @@ app.get("/", function(req, res) {
   });
 app.get("/myval", function(req, res) {
     const id = req.query.id;
-    console.log("------", id)
     const client = clients.find(x => x.id == id);
     res.send({data:client});
 });
