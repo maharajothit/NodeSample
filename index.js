@@ -1,6 +1,11 @@
 const express = require('express');
 const app = express();
 const router = express.Router();
+const bodyParser = require('body-parser');
+const cors = require('cors');
+app.use(cors());
+app.use(bodyParser.json());
+
 const clients = [{'id': 1, 'name':'DocomoPacific', 'deviceCount': 10},
     {'id': 2, 'name':'Airtel', 'deviceCount': 12},
     {'id': 3, 'name':'Samsung', 'deviceCount': 14}]
